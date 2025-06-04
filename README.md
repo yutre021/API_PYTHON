@@ -525,3 +525,77 @@ Embora existam muitos códigos de status HTTP, alguns são encontrados com muito
 
 * **500 : Internal Server Error (Erro Interno do Servidor)**
     * **Explicação:** Esta mensagem genérica de erro do servidor indica que o servidor encontrou uma condição inesperada que o impediu de atender à requisição. É um erro "catch-all" para problemas do lado do servidor quando nenhum código de erro mais específico é apropriado.
+
+# HTTP Methods in API Requests: Examples (Métodos HTTP em Requisições de API: Exemplos)
+
+HTTP methods (or verbs) define the type of action a client intends to perform on a resource via an API. Understanding their specific uses is key to designing and interacting with web services effectively. This document provides practical examples for `GET`, `POST`, and `DELETE` requests.
+
+---
+
+## English Version
+
+### 1. GET Request
+
+The `GET` method is used to retrieve data from a specified resource. It should only be used to fetch data and should not have any side effects on the server's data.
+
+* **Retrieve tomorrow's weather forecast via a weather API.**
+    * **Explanation:** This is a classic read-only operation. A client sends a `GET` request to a weather API endpoint, expecting to receive weather data for a specific date (tomorrow). The API simply provides the information without altering any server-side data.
+* **Receive a list of genre recommendations via a music catalog API.**
+    * **Explanation:** Another example of fetching information. A client requests a list of music genre recommendations from a catalog API. The API responds with the requested list, again, without modifying any data on the server.
+
+### 2. POST Request
+
+The `POST` method is used to submit data to a specified resource, often resulting in a change of state on the server or the creation of a new resource.
+
+* **Create a new playlist via a music catalog API.**
+    * **Explanation:** When a user creates a new playlist, the client sends a `POST` request containing the playlist's details (e.g., name, songs) to the music catalog API. The API processes this data to create a new playlist resource on the server.
+* **Submit a product review via an App Store API.**
+    * **Explanation:** To add a new product review, a client sends a `POST` request with the review content (e.g., rating, text) to the App Store API. The API then stores this new review, adding a new piece of data to its system.
+
+### 3. DELETE Request
+
+The `DELETE` method is used to remove a specified resource. It signifies the client's intent to delete the resource identified by the URL.
+
+* **Removal of a user comment from a blog CMS API.**
+    * **Explanation:** If a user wants to delete their comment on a blog, the client application sends a `DELETE` request to the blog's Content Management System (CMS) API, specifying the unique identifier of the comment to be removed. The API then proceeds to delete that specific comment.
+* **Remove a playlist from a music catalog API.**
+    * **Explanation:** To delete a playlist, a client sends a `DELETE` request to the music catalog API, targeting the specific playlist by its identifier. The API then removes the designated playlist resource from the system.
+
+---
+
+## Versão em Português
+
+# Métodos HTTP em Requisições de API: Exemplos
+
+Os métodos HTTP (ou verbos) definem o tipo de ação que um cliente pretende realizar em um recurso via API. Compreender seus usos específicos é fundamental para projetar e interagir com serviços web de forma eficaz. Este documento fornece exemplos práticos para requisições `GET`, `POST` e `DELETE`.
+
+---
+
+## Versão em Português
+
+### 1. Requisição GET
+
+O método `GET` é usado para recuperar dados de um recurso especificado. Ele deve ser usado apenas para buscar dados e não deve ter nenhum efeito colateral nos dados do servidor.
+
+* **Recupere a previsão do tempo para amanhã por meio de uma API de clima.**
+    * **Explicação:** Esta é uma operação clássica de apenas leitura. Um cliente envia uma requisição `GET` para um endpoint de uma API de clima, esperando receber dados meteorológicos para uma data específica (amanhã). A API simplesmente fornece a informação sem alterar nenhum dado no servidor.
+* **Receba uma lista de recomendações de gênero por meio de uma API de catálogo de músicas.**
+    * **Explicação:** Outro exemplo de busca de informações. Um cliente solicita uma lista de recomendações de gêneros musicais de uma API de catálogo. A API responde com a lista solicitada, novamente, sem modificar nenhum dado no servidor.
+
+### 2. Requisição POST
+
+O método `POST` é usado para submeter dados a um recurso especificado, frequentemente resultando em uma mudança de estado no servidor ou na criação de um novo recurso.
+
+* **Crie uma nova lista de reprodução por meio de uma API de catálogo de músicas.**
+    * **Explicação:** Quando um usuário cria uma nova lista de reprodução, o cliente envia uma requisição `POST` contendo os detalhes da lista (ex: nome, músicas) para a API do catálogo de músicas. A API processa esses dados para criar um novo recurso de lista de reprodução no servidor.
+* **Envie uma avaliação de produto por meio de uma API da App Store.**
+    * **Explicação:** Para adicionar uma nova avaliação de produto, um cliente envia uma requisição `POST` com o conteúdo da avaliação (ex: classificação, texto) para a API da App Store. A API então armazena essa nova avaliação, adicionando um novo dado ao seu sistema.
+
+### 3. Requisição DELETE
+
+O método `DELETE` é usado para remover um recurso especificado. Ele significa a intenção do cliente de excluir o recurso identificado pela URL.
+
+* **Remoção de um comentário de usuário de uma API CMS de blog.**
+    * **Explicação:** Se um usuário deseja excluir seu comentário em um blog, o aplicativo cliente envia uma requisição `DELETE` para a API do Sistema de Gerenciamento de Conteúdo (CMS) do blog, especificando o identificador único do comentário a ser removido. A API então procede para excluir esse comentário específico.
+* **Remover uma lista de reprodução de uma API de catálogo de músicas.**
+    * **Explicação:** Para excluir uma lista de reprodução, um cliente envia uma requisição `DELETE` para a API do catálogo de músicas, visando a playlist específica pelo seu identificador. A API então remove o recurso de playlist designado do sistema.
