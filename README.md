@@ -232,5 +232,14 @@ with urlopen('http://localhost:3000/lyrics/') as response:
 
 Este exemplo simples demonstra os passos fundamentais para fazer uma solicitação HTTP GET, ler a resposta e decodificá-la para um formato de string utilizável usando a biblioteca padrão do Python.
 
+### Requests 
+```python
+# Import the requests package
+import requests
 
+# Pass the API URL to the get function
+response = requests.get('http://localhost:3000/lyrics')
 
+# Print out the text attribute of the response object
+print(response.text)
+```
