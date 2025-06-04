@@ -440,3 +440,88 @@ Um servidor envia uma mensagem de resposta de volta ao cliente após receber e p
         * **Explicação:** Este exemplo mostra um objeto JSON, um formato comum para respostas de API, contendo detalhes sobre um usuário com ID 42.
 
 Essa comunicação estruturada permite que clientes e servidores interajam de forma eficiente e previsível pela web.
+
+
+# HTTP Status Codes: Categories and Common Examples (Códigos de Status HTTP: Categorias e Exemplos Comuns)
+
+HTTP status codes are three-digit numbers returned by a server in response to a client's HTTP request. They indicate whether a specific HTTP request has been successfully completed. These codes are categorized into five classes, providing a standardized way to communicate the outcome of an interaction.
+
+---
+
+## English Version
+
+### Status Code Categories
+
+HTTP status codes are grouped into five main categories, each representing a general class of response:
+
+* **1XX : Informational responses**
+    * **Explanation:** These codes indicate that the request has been received and understood. They are provisional responses, consisting only of the status line and optional headers, and are terminated by an empty line. They serve to inform the client that the request is still being processed.
+
+* **2XX : Successful responses**
+    * **Explanation:** These codes signify that the client's request was successfully received, understood, and accepted. They indicate that the action requested by the client was completed.
+
+* **3XX : Redirection messages**
+    * **Explanation:** These codes inform the client that further action needs to be taken to complete the request. This often means the resource has moved, and the client should make a new request to a different URL.
+
+* **4XX : Client error responses**
+    * **Explanation:** These codes indicate that there was an error with the client's request. The server perceives that the client has made a mistake (e.g., incorrect syntax, invalid credentials, or requesting a non-existent resource).
+
+* **5XX : Server error responses**
+    * **Explanation:** These codes indicate that the server encountered an error while attempting to fulfill a seemingly valid request from the client. This means the problem lies with the server, not the client's request.
+
+### Frequently Used Status Codes
+
+While there are many HTTP status codes, some are encountered far more frequently in web development and API interactions:
+
+* **200 : OK**
+    * **Explanation:** The most common successful response code. It indicates that the request has succeeded. The meaning of a success depends on the HTTP method (e.g., for GET, the resource has been fetched and transmitted; for POST, the resource describing the result of the action is transmitted).
+
+* **404 : Not Found**
+    * **Explanation:** This client error status code indicates that the server cannot find the requested resource. It is one of the most well-known error messages, signifying that the URL does not correspond to any available resource on the server.
+
+* **500 : Internal Server Error**
+    * **Explanation:** This generic server error message indicates that the server encountered an unexpected condition that prevented it from fulfilling the request. It's a catch-all error for server-side issues when no more specific error code is appropriate.
+
+---
+
+## Versão em Português
+
+# Códigos de Status HTTP: Categorias e Exemplos Comuns
+
+Códigos de status HTTP são números de três dígitos retornados por um servidor em resposta a uma requisição HTTP de um cliente. Eles indicam se uma requisição HTTP específica foi concluída com sucesso. Esses códigos são categorizados em cinco classes, fornecendo uma maneira padronizada de comunicar o resultado de uma interação.
+
+---
+
+## Versão em Português
+
+### Categorias de Códigos de Status
+
+Os códigos de status HTTP são agrupados em cinco categorias principais, cada uma representando uma classe geral de resposta:
+
+* **1XX : Respostas informativas**
+    * **Explicação:** Esses códigos indicam que a requisição foi recebida e compreendida. São respostas provisórias, consistindo apenas da linha de status e cabeçalhos opcionais, e são terminadas por uma linha vazia. Servem para informar ao cliente que a requisição ainda está sendo processada.
+
+* **2XX : Respostas de sucesso**
+    * **Explicação:** Esses códigos significam que a requisição do cliente foi recebida, compreendida e aceita com sucesso. Eles indicam que a ação solicitada pelo cliente foi concluída.
+
+* **3XX : Mensagens de redirecionamento**
+    * **Explicação:** Esses códigos informam ao cliente que ações adicionais precisam ser tomadas para completar a requisição. Isso frequentemente significa que o recurso se moveu, e o cliente deve fazer uma nova requisição para uma URL diferente.
+
+* **4XX : Respostas de erro do cliente**
+    * **Explicação:** Esses códigos indicam que houve um erro com a requisição do cliente. O servidor percebe que o cliente cometeu um erro (ex: sintaxe incorreta, credenciais inválidas ou requisição de um recurso não existente).
+
+* **5XX : Respostas de erro do servidor**
+    * **Explicação:** Esses códigos indicam que o servidor encontrou um erro ao tentar atender a uma requisição aparentemente válida do cliente. Isso significa que o problema está no servidor, não na requisição do cliente.
+
+### Códigos de Status Frequentemente Usados
+
+Embora existam muitos códigos de status HTTP, alguns são encontrados com muito mais frequência no desenvolvimento web e em interações de API:
+
+* **200 : OK**
+    * **Explicação:** O código de resposta de sucesso mais comum. Indica que a requisição foi bem-sucedida. O significado de um sucesso depende do método HTTP (ex: para GET, o recurso foi buscado e transmitido; para POST, o recurso que descreve o resultado da ação é transmitido).
+
+* **404 : Not Found (Não Encontrado)**
+    * **Explicação:** Este código de status de erro do cliente indica que o servidor não consegue encontrar o recurso solicitado. É uma das mensagens de erro mais conhecidas, significando que a URL não corresponde a nenhum recurso disponível no servidor.
+
+* **500 : Internal Server Error (Erro Interno do Servidor)**
+    * **Explicação:** Esta mensagem genérica de erro do servidor indica que o servidor encontrou uma condição inesperada que o impediu de atender à requisição. É um erro "catch-all" para problemas do lado do servidor quando nenhum código de erro mais específico é apropriado.
