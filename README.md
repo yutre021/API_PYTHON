@@ -600,7 +600,7 @@ O método `DELETE` é usado para remover um recurso especificado. Ele significa 
 * **Remover uma lista de reprodução de uma API de catálogo de músicas.**
     * **Explicação:** Para excluir uma lista de reprodução, um cliente envia uma requisição `DELETE` para a API do catálogo de músicas, visando a playlist específica pelo seu identificador. A API então remove o recurso de playlist designado do sistema.
  
-###Example
+### Example
 
 ```python
 import requests
