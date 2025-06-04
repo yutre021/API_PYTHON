@@ -779,3 +779,18 @@ Embora cada método tenha seu lugar, suas características de segurança inerent
 ### Resumo de Segurança:
 
 Para **aplicações e serviços voltados ao público que lidam com dados sensíveis do usuário**, **OAuth 2.0 (frequentemente combinado com OpenID Connect)** e **JWTs (usados como bearer tokens em fluxos OAuth)** oferecem os mais altos níveis de segurança devido à sua flexibilidade, mecanismos de expiração e foco na autorização delegada. As **Chaves de API** são adequadas para acesso menos sensível à API ou comunicação servidor-para-servidor onde a chave pode ser mantida em alta segurança. A **Autenticação Básica** deve geralmente ser evitada, a menos que seja protegida por outros meios (como uma VPN ou regras de firewall muito estritas) ou para aplicações internas de risco muito baixo.
+
+### Auth (Autenticação)
+```python
+# Create a headers dictionary containing and set the API key using the correct key and value 
+headers = {'Authorization': 'Bearer SUA_CHAVE_AQUI'}
+# Add the headers dictionary to the requests.get() call using the correct function argument
+response = requests.get('http://localhost:3000/albums', headers=headers)
+
+if(response.status_code == 200):
+    print("Success!")
+elif(response.status_code == 401):
+    print('Authentication failed')
+else:
+    print('Another error occurred')
+```
