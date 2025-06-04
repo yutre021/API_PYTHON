@@ -243,3 +243,81 @@ response = requests.get('http://localhost:3000/lyrics')
 # Print out the text attribute of the response object
 print(response.text)
 ```
+
+# HTTP Verbs and Their Actions in API Interactions (Verbos HTTP e Suas Ações em Interações de API)
+
+This document outlines the fundamental HTTP verbs commonly used in API design, detailing the actions they represent and their typical use cases in managing resources. These verbs are crucial for defining how clients interact with web servers to perform operations on data.
+
+---
+
+## English Version
+
+### Understanding HTTP Actions (Verbs)
+
+HTTP verbs (also known as methods) define the type of action a client wants to perform on a resource identified by a URL. They are a core part of RESTful API design.
+
+| Verb   | Action  | Description                                |
+| :----- | :------ | :----------------------------------------- |
+| **GET** | Read    | Check the mailbox contents                 |
+| **POST** | Create  | Drop a new package in the mailbox          |
+| **PUT** | Update  | Replace all packages with a new one        |
+| **DELETE** | Delete  | Remove all packages from the mailbox       |
+
+* **GET (Read):**
+    * **Description:** This verb is used to retrieve data from a specified resource. It should only fetch data and have no other effect on the server's data.
+    * **Analogy:** Checking the mailbox contents means you are looking inside to see what is there, without changing anything.
+
+* **POST (Create):**
+    * **Description:** This verb is used to submit data to a specified resource, often causing a change in state or the creation of a new resource on the server.
+    * **Analogy:** Dropping a new package in the mailbox implies you are adding a new item, creating a new entry in the mailbox's contents.
+
+* **PUT (Update):**
+    * **Description:** This verb is used to update an existing resource or create a resource if it does not exist. It typically replaces the entire resource with the payload sent.
+    * **Analogy:** Replacing all packages with a new one signifies that the entire content of the mailbox is being overwritten or substituted with a new set of packages.
+
+* **DELETE (Delete):**
+    * **Description:** This verb is used to remove a specified resource from the server.
+    * **Analogy:** Removing all packages from the mailbox means you are emptying it, deleting its entire contents.
+
+These verbs provide a clear and standardized way for clients and servers to communicate intentions, making APIs predictable and easier to use.
+
+---
+
+## Versão em Português
+
+# Verbos HTTP e Suas Ações em Interações de API
+
+Este documento descreve os verbos HTTP fundamentais comumente usados no design de APIs, detalhando as ações que eles representam e seus casos de uso típicos no gerenciamento de recursos. Esses verbos são cruciais para definir como os clientes interagem com os servidores web para realizar operações em dados.
+
+---
+
+## Versão em Português
+
+### Compreendendo as Ações HTTP (Verbos)
+
+Verbos HTTP (também conhecidos como métodos) definem o tipo de ação que um cliente deseja realizar em um recurso identificado por uma URL. Eles são uma parte central do design de APIs RESTful.
+
+| Verbo    | Ação     | Descrição                                 |
+| :------- | :------- | :---------------------------------------- |
+| **GET** | Ler      | Verificar o conteúdo da caixa de correio  |
+| **POST** | Criar    | Colocar um novo pacote na caixa de correio |
+| **PUT** | Atualizar | Substituir todos os pacotes por um novo    |
+| **DELETE** | Excluir  | Remover todos os pacotes da caixa de correio |
+
+* **GET (Ler):**
+    * **Descrição:** Este verbo é usado para recuperar dados de um recurso especificado. Ele deve apenas buscar dados e não ter nenhum outro efeito nos dados do servidor.
+    * **Analogia:** Verificar o conteúdo da caixa de correio significa que você está olhando para ver o que há dentro, sem alterar nada.
+
+* **POST (Criar):**
+    * **Descrição:** Este verbo é usado para submeter dados a um recurso especificado, frequentemente causando uma mudança de estado ou a criação de um novo recurso no servidor.
+    * **Analogia:** Colocar um novo pacote na caixa de correio implica que você está adicionando um novo item, criando uma nova entrada no conteúdo da caixa de correio.
+
+* **PUT (Atualizar):**
+    * **Descrição:** Este verbo é usado para atualizar um recurso existente ou criar um recurso se ele não existir. Ele tipicamente substitui todo o recurso pelo payload enviado.
+    * **Analogia:** Substituir todos os pacotes por um novo significa que todo o conteúdo da caixa de correio está sendo sobrescrito ou substituído por um novo conjunto de pacotes.
+
+* **DELETE (Excluir):**
+    * **Descrição:** Este verbo é usado para remover um recurso especificado do servidor.
+    * **Analogia:** Remover todos os pacotes da caixa de correio significa que você está esvaziando-a, excluindo todo o seu conteúdo.
+
+Esses verbos fornecem uma maneira clara e padronizada para clientes e servidores comunicarem intenções, tornando as APIs previsíveis e mais fáceis de usar.
