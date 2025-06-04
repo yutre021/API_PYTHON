@@ -794,3 +794,36 @@ elif(response.status_code == 401):
 else:
     print('Another error occurred')
 ```
+
+### Import JSON(Importando JSON)
+```python
+import json
+album = {'id': 42, 'title':"Back in Black"}
+string = json.dumps(album) # Encodes a python object to a JSON string
+album = json.loads(string) # Decodes a JSON string to a Python object
+```
+
+### Request JSON (Requisitando JSON)
+
+```python
+# GET request with an accept header
+response = requests.get('http://api.music-catalog.com/lyrics', headers={'accept': 'application/json'})
+# Print the JSON text
+print(response.text)
+# Decode into a Python object
+data = response.json()
+```
+
+### Sending JSON (Mandando JSON)
+
+```python
+import requests
+playlist = {"name": "Road trip", "genre":"rock", "private":"true"}
+# Add the playlist using via the `json` argument
+response = requests.post("http://api.music-catalog.com/playlists", json=playlist)
+
+# Get the request object
+request = response.request
+# Print the request content-type header
+print(request.headers['content-type'])
+```
