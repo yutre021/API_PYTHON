@@ -675,3 +675,12 @@ if (response.status_code == 200):
 elif (response.status_code == requests.codes.not_found):
   print('Oops, that API could not be found!')
 ```
+
+### Print de Headers of content-type(Imprimeindo o cabeçalho de content-type)
+```python
+import requests
+response = requests.get('http://localhost:3000/lyrics')
+
+# Print the response content-type header
+print(response.headers['content-type'])
+```
