@@ -599,3 +599,54 @@ O método `DELETE` é usado para remover um recurso especificado. Ele significa 
     * **Explicação:** Se um usuário deseja excluir seu comentário em um blog, o aplicativo cliente envia uma requisição `DELETE` para a API do Sistema de Gerenciamento de Conteúdo (CMS) do blog, especificando o identificador único do comentário a ser removido. A API então procede para excluir esse comentário específico.
 * **Remover uma lista de reprodução de uma API de catálogo de músicas.**
     * **Explicação:** Para excluir uma lista de reprodução, um cliente envia uma requisição `DELETE` para a API do catálogo de músicas, visando a playlist específica pelo seu identificador. A API então remove o recurso de playlist designado do sistema.
+ 
+###Example
+
+```python
+import requests
+
+# GET - Retrieve a resource
+# Used to fetch information from a server. Data is typically passed in the URL parameters.
+response_get = requests.get('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)')
+# print(response_get.status_code)
+
+# POST - Create a resource
+# Used to send data to the server to create a new resource.
+response_post = requests.post('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)', data={"key": "value"})
+# print(response_post.status_code)
+
+# PUT - Update an existing resource
+# Used to send data to the server to update an existing resource, often replacing the entire resource.
+response_put = requests.put('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)', data={"key": "value"})
+# print(response_put.status_code)
+
+# DELETE - Remove a resource
+# Used to request the removal of a specified resource from the server.
+response_delete = requests.delete('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)')
+# print(response_delete.status_code)
+```
+
+### Exemplo
+```python
+import requests
+
+# GET - Recuperar um recurso
+# Usado para buscar informações de um servidor. Os dados são tipicamente passados nos parâmetros da URL.
+response_get = requests.get('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)')
+# print(response_get.status_code)
+
+# POST - Criar um recurso
+# Usado para enviar dados ao servidor para criar um novo recurso.
+response_post = requests.post('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)', data={"key": "value"})
+# print(response_post.status_code)
+
+# PUT - Atualizar um recurso existente
+# Usado para enviar dados ao servidor para atualizar um recurso existente, frequentemente substituindo todo o recurso.
+response_put = requests.put('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)', data={"key": "value"})
+# print(response_put.status_code)
+
+# DELETE - Remover um recurso
+# Usado para solicitar a remoção de um recurso especificado do servidor.
+response_delete = requests.delete('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)')
+# print(response_delete.status_code)
+```
