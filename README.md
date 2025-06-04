@@ -650,3 +650,28 @@ response_put = requests.put('[http://350.5th-ave.com/unit/243](http://350.5th-av
 response_delete = requests.delete('[http://350.5th-ave.com/unit/243](http://350.5th-ave.com/unit/243)')
 # print(response_delete.status_code)
 ```
+
+```python
+import requests
+response = requests.get('http://localhost:3000/movies')
+
+# Check if the response.status_code is equal to the requests.codes value for "200 OK"
+if (response.status_code == requests.codes.ok):
+  print('The server responded succesfully!')
+  
+# Or if the request was not successful because the API did not exist
+elif (response.status_code == requests.codes.not_found):
+  print('Oops, that API could not be found!')
+```
+```python
+import requests
+# Make a request to the movies endpoint of the API
+response = requests.get('http://localhost:3000/movies')
+
+if (response.status_code == 200):
+  print('The server responded succesfully!')
+  
+# Check the response status code
+elif (response.status_code == requests.codes.not_found):
+  print('Oops, that API could not be found!')
+```
