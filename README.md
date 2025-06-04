@@ -882,10 +882,10 @@ import requests
 from requests.exceptions import ConnectionError
 url = ''
 try:
-r = requests.get(url)
-print(r.status_code)
+   r = requests.get(url)
+   print(r.status_code)
 except ConnectionError as conn_err:
-print(f'Connection
+   print(f'Connection
 ```
 
 ### Error Raise Status (Erro de status)
@@ -895,14 +895,14 @@ import requests
 # 1: Import the requests library exceptions
 from requests.exceptions import ConnectionError, HTTPError
 try:
-r = requests.get("http://api.music-catalog.com/albums")
-# 2: Enable raising exceptions for returned error statuscodes
-r.raise_for_status()
-print(r.status_code)
+   r = requests.get("http://api.music-catalog.com/albums")
+   # 2: Enable raising exceptions for returned error statuscodes
+   r.raise_for_status()
+   print(r.status_code)
 # 3: Catch any connection errors
 except ConnectionError as conn_err:
-print(f'Connection Error! {conn_err}.')
-# 4: Catch error responses from the API server
+   print(f'Connection Error! {conn_err}.')
+   # 4: Catch error responses from the API server
 except HTTPError as http_err:
-print(f'HTTP error occurred: {http_err}')
+   print(f'HTTP error occurred: {http_err}')
 ```
