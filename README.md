@@ -126,6 +126,7 @@ In this context, we are interacting with a Music Catalog API, specifically its `
 
 The Python code provided demonstrates a basic way to perform this API request using `urllib.request`:
 
+
 ```python
 from urllib.request import urlopen
 
@@ -140,6 +141,7 @@ with urlopen('http://localhost:3000/lyrics/') as response:
   
   print(string)
 ```
+
 ### Code Explanation:
 1.from urllib.request import urlopen:
 
