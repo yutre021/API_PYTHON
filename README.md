@@ -885,7 +885,7 @@ try:
    r = requests.get(url)
    print(r.status_code)
 except ConnectionError as conn_err:
-   print(f'Connection
+   print(f'Connection Error {conn_err}')
 ```
 
 ### Error Raise Status (Erro de status)
